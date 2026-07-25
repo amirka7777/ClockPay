@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+body {
+  background-color: black;
+  font-family: 'Comfortaa';
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Основной контейнер формы */
+.Registration {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  aspect-ratio: 1 / 1;
+  background-color: white;
+  border-radius: 15px;
+}
+
+/* Сама форма внутри карточки */
+.Registration form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 80%; /* Занимает 80% ширины белой карточки */
+  max-width: 320px;
+}
+
+.Registration h1 {
+  color: black;
+  text-align: center;
+  margin: 0 0 5px 0;
+}
+
+.Registration p {
+  color: black;
+  text-align: center;
+}
+
+/* Стили для ВСЕХ полей ввода (Ник, пароли) */
+.Registration form input[type="text"],
+.Registration form input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-family: 'Comfortaa';
+}
+
+/* Блок: Пароль + Чекбокс */
+.check-password {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ГЛАВНОЕ: Заставляем поле ввода пароля растянуться! */
+.check-password input[type="password"] {
+  flex: 1;       /* Берет всё свободное место */
+  width: 100%;   /* Дополнительная страховка */
+  min-width: 0;  /* Критично важно! Разрешает полю сжиматься меньше текста */
+}
+
+/* Стили для чекбокса */
+.check-password input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0; /* Запрещает чекбоксу сжиматься */
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Стили для кнопки */
+.Registration form button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-family: 'Comfortaa';
+  margin-top: 5px;
+}
+
+.Registration form button:hover {
+  background-color: #ddd;
+}

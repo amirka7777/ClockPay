@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Subscription = () => {
+const Subscriptions = () => {
     return <div>подписки</div>
 }
-export default Subscription;
+export default Subscriptions;
